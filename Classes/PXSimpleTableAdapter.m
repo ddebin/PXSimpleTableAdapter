@@ -244,6 +244,13 @@
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)aTableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	PXSimpleTableSection *section = [self.sections objectAtIndex:indexPath.section];
+	PXSimpleTableRow *row = [section.rows objectAtIndex:indexPath.row];
+	return [row rowHeight];
+}
+
 - (NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     PXSimpleTableSection *theSection = [self.sections objectAtIndex:section];
