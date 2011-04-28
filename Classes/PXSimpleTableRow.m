@@ -103,6 +103,11 @@
 	return [self.section.adapter.tableView cellForRowAtIndexPath:self.indexPath];
 }
 
+- (CGFloat)rowHeight
+{
+	return 44.0f;
+}
+
 #pragma mark - Cell Handling
 
 + (NSString*)cellIdentifier
