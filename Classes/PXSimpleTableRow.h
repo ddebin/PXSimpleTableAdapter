@@ -46,4 +46,6 @@ typedef void (^PXSimpleTableRowSelectionBlock) (PXSimpleTableRow *row);
 
 - (void)setUpContentsOfCell:(UITableViewCell*)cell;
 
+- (CGFloat)rowHeight;
+
 @end
