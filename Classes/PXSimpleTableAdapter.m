@@ -122,7 +122,8 @@
     }
     
     self.sections = newSections;
-    
+
+    [newSections release];
     return YES;
 }
 
