@@ -256,7 +256,24 @@
 {
     PXSimpleTableSection *theSection = [self.sections objectAtIndex:section];
     
-    return theSection.sectionHeaderTitle;
+	if (theSection.sectionHeaderView == nil) return theSection.sectionHeaderTitle;
+	else return nil;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    PXSimpleTableSection *theSection = [self.sections objectAtIndex:section];
+    
+	if (theSection.sectionHeaderView != nil) return theSection.sectionHeaderView;
+	else return nil;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    PXSimpleTableSection *theSection = [self.sections objectAtIndex:section];
+    
+	if (theSection.sectionHeaderView != nil) return theSection.sectionHeaderView.frame.size.height;
+	else return 0.0f;
 }
 
 - (NSString*)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section

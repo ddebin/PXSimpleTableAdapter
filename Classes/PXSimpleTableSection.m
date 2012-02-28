@@ -19,6 +19,7 @@
 
 @synthesize sectionHeaderTitle = _sectionHeaderTitle;
 @synthesize sectionFooterTitle = _sectionFooterTitle;
+@synthesize sectionHeaderView = _sectionHeaderView;
 @synthesize rows = _rows;
 @synthesize adapter = _adapter;
 
@@ -62,6 +63,7 @@
     [_rows release], _rows=nil;
     [_sectionHeaderTitle release], _sectionHeaderTitle=nil;
     [_sectionFooterTitle release], _sectionFooterTitle=nil;
+	[_sectionHeaderView release], _sectionHeaderView=nil;
     
     [super dealloc];
 }

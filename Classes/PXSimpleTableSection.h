@@ -18,6 +18,8 @@
     NSString *_sectionFooterTitle;
     
     NSMutableArray *_rows;
+	
+	UIView *_sectionHeaderView;
 }
 
 @property (nonatomic, readonly) PXSimpleTableAdapter *adapter;
@@ -26,6 +28,7 @@
 @property (nonatomic, copy) NSString *sectionFooterTitle;
 @property (nonatomic, retain) NSArray *rows;
 @property (nonatomic, readonly) NSUInteger index;
+@property (nonatomic, retain) UIView *sectionHeaderView;
 
 + (id)sectionWithRows:(NSArray*)rows;
 + (id)sectionWithSectionHeaderTitle:(NSString*)headerTitle sectionFooterTitle:(NSString*)footerTitle rows:(NSArray*)rows;
