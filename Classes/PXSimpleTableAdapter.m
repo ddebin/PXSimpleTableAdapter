@@ -268,21 +268,6 @@
 	else return nil;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    PXSimpleTableSection *theSection = [self.sections objectAtIndex:section];
-    
-	if (theSection.sectionHeaderView != nil) return theSection.sectionHeaderView.frame.size.height;
-	else return 0.0f;
-}
-
-- (NSString*)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
-{
-    PXSimpleTableSection *theSection = [self.sections objectAtIndex:section];
-    
-    return theSection.sectionFooterTitle;
-}
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	PXSimpleTableSection *section = [self.sections objectAtIndex:indexPath.section];
